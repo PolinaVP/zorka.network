@@ -83,20 +83,14 @@ function updateContent() {
     document.querySelector('.language a:nth-child(2) li').className = "";
     document.querySelector('.mob_lang a:nth-child(1)').className = "act_lang";
     document.querySelector('.mob_lang a:nth-child(2)').className = "";
-    history.adapter.bind(window, 'statechange', function (e) {
-      let state = history.getstate();
-      loadPage(state.url);
-    })
+
   } else {
     history.pushState({ param: 'Value' }, '', 'en');
     document.querySelector('.language a:nth-child(2) li').className = "grey";
     document.querySelector('.language a:nth-child(1) li').className = "";
     document.querySelector('.mob_lang a:nth-child(2)').className = "act_lang";
     document.querySelector('.mob_lang a:nth-child(1)').className = "";
-    history.adapter.bind(window, 'statechange', function (e) {
-      let state = history.getstate();
-      loadPage(state.url);
-    })
+
   };
 }
 
