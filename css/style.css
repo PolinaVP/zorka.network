@@ -6365,11 +6365,12 @@ width: 400px;
 }
 
 }
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) and (min-width: 992px){
   .offer_search_btn._mobstyle{
     float: left;
     width: 200px;
     margin-bottom: 20px;
+    margin-top: 20px;
   }
 
 }
