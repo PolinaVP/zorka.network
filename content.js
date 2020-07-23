@@ -41,8 +41,12 @@ function onSearch() {
 function content(offers) {
   document.getElementById('results').innerHTML = '';
   for (let i = 0; i < offers.length; i++) {
-    let offers_logo = 'http://my.zorkanetwork.com/logos/' + offers[i].logo_source;
-
+    let offers_logo;
+    if (offers[i].logo_source) {
+      offers_logo = 'http://my.zorkanetwork.com/logos/' + offers[i].logo_source;
+    } else {
+      offers_logo = 'img/icon.jpg';
+    }
 
 
     let payment = offers[i].payments;
