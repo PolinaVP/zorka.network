@@ -6365,6 +6365,14 @@ width: 400px;
 }
 
 }
+@media screen and (max-width: 1200px){
+  offer_search_btn._mobstyle{
+    float: left;
+    width: 200px;
+    margin-bottom: 20px;
+  }
+
+}
 
 @media screen and (max-width: 992px){
 
