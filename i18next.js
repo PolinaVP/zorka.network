@@ -152,10 +152,18 @@ function updateContent() {
     $('.ru').css('display', 'none');
     $('.en').css('display', 'block');
     history.pushState({ param: 'Value' }, '', 'ru');
+    history.adapter.bind(window, 'statechange', function (e) {
+      let state = history.getstate();
+      loadPage(state.url);
+    })
   } else {
     $('.en').css('display', 'none');
     $('.ru').css('display', 'block');
     history.pushState({ param: 'Value' }, '', 'en');
+    history.adapter.bind(window, 'statechange', function (e) {
+      let state = history.getstate();
+      loadPage(state.url);
+    })
   };
 }
 
@@ -168,7 +176,10 @@ i18next.on('languageChanged', () => {
 }
 )
 
-
+// history.adapter.bind(window, 'statechange', function(e){
+//   let state = history.getstate();
+//   loadPage(state.url);
+// })
 
 
 
