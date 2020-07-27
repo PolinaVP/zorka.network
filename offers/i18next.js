@@ -103,14 +103,6 @@ i18next.on('languageChanged', () => {
 }
 )
 
-// window.onpopstate = function (e) {
-//   if (e.state) {
-//     e.state = null;
-//   }
-// };
-window.onbeforeunload = function (e) {
-  history.replaceState({ lang: '' }, '', '');
-};
 
 
 
