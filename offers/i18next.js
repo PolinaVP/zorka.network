@@ -78,14 +78,14 @@ function updateContent() {
   document.querySelector('.popup_cookie button').innerHTML = i18next.t('Accept');
 
   if (i18next.language == 'ru') {
-    history.pushState({ param: 'Value' }, '', 'ru');
+    history.pushState({ lang: 'ru' }, '', 'ru');
     document.querySelector('.language a:nth-child(1) li').className = "grey";
     document.querySelector('.language a:nth-child(2) li').className = "";
     document.querySelector('.mob_lang a:nth-child(1)').className = "act_lang";
     document.querySelector('.mob_lang a:nth-child(2)').className = "";
 
   } else {
-    history.pushState({ param: 'Value' }, '', 'en');
+    history.pushState({ lang: 'en' }, '', 'en');
     document.querySelector('.language a:nth-child(2) li').className = "grey";
     document.querySelector('.language a:nth-child(1) li').className = "";
     document.querySelector('.mob_lang a:nth-child(2)').className = "act_lang";
@@ -103,6 +103,11 @@ i18next.on('languageChanged', () => {
 }
 )
 
+// window.onpopstate = function (e) {
+//   if (e.state) {
+
+//   }
+// };
 
 
 
