@@ -170,4 +170,6 @@ i18next.on('languageChanged', () => {
 )
 
 
-
+window.onbeforeunload = function (e) {
+  history.replaceState({ lang: '' }, '', '/');
+};
