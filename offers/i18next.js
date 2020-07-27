@@ -103,11 +103,11 @@ i18next.on('languageChanged', () => {
 }
 )
 
-// window.onpopstate = function (e) {
-//   if (e.state) {
-
-//   }
-// };
+window.onpopstate = function (e) {
+  if (e.state) {
+    e.state = null;
+  }
+};
 
 
 
