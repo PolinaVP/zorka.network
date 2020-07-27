@@ -151,12 +151,12 @@ function updateContent() {
   if (i18next.language == 'ru') {
     $('.ru').css('display', 'none');
     $('.en').css('display', 'block');
-    history.replaceState(stateObj, '', 'ru');
+    history.pushState(stateObj, '', 'ru');
 
   } else {
     $('.en').css('display', 'none');
     $('.ru').css('display', 'block');
-    history.replaceState(stateObj, '', 'en');
+    history.pushState(stateObj, '', 'en');
   };
 }
 
