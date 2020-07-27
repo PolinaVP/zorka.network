@@ -108,7 +108,9 @@ i18next.on('languageChanged', () => {
 //     e.state = null;
 //   }
 // };
-
+window.onbeforeunload = function (e) {
+  history.replaceState({ lang: '' }, '', '');
+};
 
 
 
