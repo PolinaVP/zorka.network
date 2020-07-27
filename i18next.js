@@ -169,8 +169,8 @@ i18next.on('languageChanged', () => {
 }
 )
 
-window.addEventListener("unload", function () {
+window.onbeforeunload = function () {
   history.replaceState({}, '', '');
-});
+};
 
 
