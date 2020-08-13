@@ -79,7 +79,6 @@ function updateContent() {
 
   if (i18next.language == 'ru') {
     history.pushState(stateObj, '', 'ru');
-    window.location = originalUrl;
     document.querySelector('.language a:nth-child(1) li').className = "grey";
     document.querySelector('.language a:nth-child(2) li').className = "";
     document.querySelector('.mob_lang a:nth-child(1)').className = "act_lang";
@@ -87,13 +86,13 @@ function updateContent() {
 
   } else {
     history.pushState(stateObj, '', 'en');
-    window.location = originalUrl;
     document.querySelector('.language a:nth-child(2) li').className = "grey";
     document.querySelector('.language a:nth-child(1) li').className = "";
     document.querySelector('.mob_lang a:nth-child(2)').className = "act_lang";
     document.querySelector('.mob_lang a:nth-child(1)').className = "";
 
   };
+  window.location = originalUrl;
 }
 
 function changeLng(lng) {
