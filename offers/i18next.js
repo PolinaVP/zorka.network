@@ -1,4 +1,4 @@
-let stateObj = { foo: "lang" };
+
 let originalUrl = window.location.href;
 i18next.use(i18nextBrowserLanguageDetector).init({
   fallbackLng: 'ru',
@@ -78,14 +78,14 @@ function updateContent() {
   document.querySelector('.popup_cookie button').innerHTML = i18next.t('Accept');
 
   if (i18next.language == 'ru') {
-    history.pushState(stateObj, '', 'ru');
+    history.pushState('ru', '', 'ru');
     document.querySelector('.language a:nth-child(1) li').className = "grey";
     document.querySelector('.language a:nth-child(2) li').className = "";
     document.querySelector('.mob_lang a:nth-child(1)').className = "act_lang";
     document.querySelector('.mob_lang a:nth-child(2)').className = "";
 
   } else {
-    history.pushState(stateObj, '', 'en');
+    history.pushState('en', '', 'en');
     document.querySelector('.language a:nth-child(2) li').className = "grey";
     document.querySelector('.language a:nth-child(1) li').className = "";
     document.querySelector('.mob_lang a:nth-child(2)').className = "act_lang";
