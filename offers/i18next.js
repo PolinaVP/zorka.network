@@ -1,5 +1,5 @@
 let stateObj = { foo: "lang" };
-
+let originalUrl = window.location.href;
 i18next.use(i18nextBrowserLanguageDetector).init({
   fallbackLng: 'ru',
   debug: true,
@@ -78,7 +78,6 @@ function updateContent() {
   document.querySelector('.popup_cookie button').innerHTML = i18next.t('Accept');
 
   if (i18next.language == 'ru') {
-    let originalUrl = window.location.href;
     history.pushState(stateObj, '', 'ru');
     window.location = originalUrl;
     document.querySelector('.language a:nth-child(1) li').className = "grey";
@@ -87,7 +86,6 @@ function updateContent() {
     document.querySelector('.mob_lang a:nth-child(2)').className = "";
 
   } else {
-    let originalUrl = window.location.href;
     history.pushState(stateObj, '', 'en');
     window.location = originalUrl;
     document.querySelector('.language a:nth-child(2) li').className = "grey";
