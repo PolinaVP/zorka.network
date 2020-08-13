@@ -92,7 +92,7 @@ function updateContent() {
     document.querySelector('.mob_lang a:nth-child(1)').className = "";
 
   };
-  window.location = originalUrl;
+
 }
 
 function changeLng(lng) {
@@ -103,6 +103,12 @@ i18next.on('languageChanged', () => {
   updateContent();
 }
 )
+
+window.addEventListener('popstate', function (event) {
+  console.log('popstate fired!');
+
+  changeLng(event.state);
+});
 
 
 
