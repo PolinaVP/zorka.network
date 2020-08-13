@@ -45,7 +45,7 @@ function content(offers) {
     if (offers[i].logo_source) {
       offers_logo = 'http://my.zorkanetwork.com/logos/' + offers[i].logo_source;
     } else {
-      offers_logo = 'img/icon.jpg';
+      offers_logo = '../img/icon.jpg';
     }
 
 
