@@ -105,7 +105,7 @@ i18next.on('languageChanged', () => {
 )
 
 window.addEventListener('popstate', function (event) {
-  console.log('popstate fired!');
+  console.log(event.state);
 
   i18next.changeLanguage(event.state);
 });
