@@ -91,9 +91,9 @@ router
         i18next.changeLanguage('ru');
     })
     .add(/en/, () => {
-        i18next.changeLanguage('ru');
+        i18next.changeLanguage('en');
     })
     .add('', () => {
-      // general controller
-      console.log('welcome in catch all controller');
+        // general controller
+        console.log('welcome in catch all controller');
     });
