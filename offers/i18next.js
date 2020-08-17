@@ -108,7 +108,6 @@ window.addEventListener('popstate', function (event) {
   console.log(event.state);
 
   i18next.changeLanguage(event.state);
-  return event.preventDefault();
 });
 
 
