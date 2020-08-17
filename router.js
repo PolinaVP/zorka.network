@@ -90,7 +90,7 @@ router
     .add(/ru/, () => {
         i18next.changeLanguage('ru');
     })
-    .add(/en/, () => {
+    .add('en', () => {
         i18next.changeLanguage('en');
     })
     .add('', () => {
