@@ -1,5 +1,4 @@
 
-let originalUrl = window.location.href;
 i18next.use(i18nextBrowserLanguageDetector).init({
   fallbackLng: 'ru',
   debug: true,
