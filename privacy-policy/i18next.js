@@ -789,14 +789,14 @@ function updateContent() {
 
   if (i18next.language == 'ru') {
 
-    document.querySelector('.language li:nth-child(1) a').className = "grey";
-    document.querySelector('.language li:nth-child(2) a').className = "";
+    document.querySelector('.language li:nth-child(1)').className = "grey";
+    document.querySelector('.language li:nth-child(2)').className = "";
     document.querySelector('.mob_lang a:nth-child(1)').className = "act_lang";
     document.querySelector('.mob_lang a:nth-child(2)').className = "";
   } else {
 
-    document.querySelector('.language li:nth-child(2) a').className = "grey";
-    document.querySelector('.language li:nth-child(1) a').className = "";
+    document.querySelector('.language li:nth-child(2)').className = "grey";
+    document.querySelector('.language li:nth-child(1)').className = "";
     document.querySelector('.mob_lang a:nth-child(2)').className = "act_lang";
     document.querySelector('.mob_lang a:nth-child(1)').className = "";
   };
