@@ -587,13 +587,13 @@ background: #111111;
 font-family: "MontserratReg";
 color: #ffffff;
 display: block;}
-ul.language a li.grey {
+ul.language li.grey a{
 background: #1a1a1a; }
 ul.language a {
 text-decoration: none;
 cursor: pointer;}
 
-.bl_language ul.language a li:hover {
+.bl_language ul.language li a:hover {
 color: #AD00FF; }
 
 .bl_title {
