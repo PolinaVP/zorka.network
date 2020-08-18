@@ -183,7 +183,7 @@ function clickHandler(event) {
     data = lang || null; // In reality this could be an AJAX request
 
   updateContent(data);
-  history.pushState(data, event.target.textContent, event.target.href);
+  history.pushState(data, event.target.textContent, data);
 
   return event.preventDefault();
 }
