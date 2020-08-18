@@ -167,7 +167,7 @@ i18next.on('languageChanged', () => {
 }
 )
 
-let linkEls = document.querySelectorAll('.language');
+let linkEls = document.querySelectorAll('.change_language');
 
 function changelng(data) {
   if (data == null)
