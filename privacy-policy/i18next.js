@@ -824,7 +824,7 @@ function clickHandler(event) {
     data = lang || null;
 
   changelng(data);
-  history.pushState(data, '', data);
+  history.pushState(data, event.target.textContent, data);
 
   return event.preventDefault();
 }

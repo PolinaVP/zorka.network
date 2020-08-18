@@ -117,7 +117,7 @@ function clickHandler(event) {
     data = lang || null;
 
   changelng(data);
-  history.pushState(data, event.target.textContent, event.target.href);
+  history.pushState(data, event.target.textContent, data);
 
   return event.preventDefault();
 }
