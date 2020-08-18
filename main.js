@@ -88,13 +88,13 @@ $('.submenu').click(function () {
   $('.bl_w_world').css({ 'display': 'none' });
 
 });
-$('.submenu li.ru').click(function () {
-  i18next.changeLanguage('ru');
-});
+// $('.submenu li.ru').click(function () {
+//   i18next.changeLanguage('ru');
+// });
 
-$('.submenu li.en').click(function () {
-  i18next.changeLanguage('en');
-});
+// $('.submenu li.en').click(function () {
+//   i18next.changeLanguage('en');
+// });
 
 $('.bl_w_world').click(function () {
   $('.submenu').css({ 'display': 'none' });
