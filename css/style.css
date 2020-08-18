@@ -587,8 +587,7 @@ ul.language a li.grey {
 background: #1a1a1a; }
 ul.language a {
 text-decoration: none;
-cursor: pointer;
-color: red; }
+cursor: pointer;}
 
 .bl_language ul.language a li:hover {
 color: #AD00FF; }
