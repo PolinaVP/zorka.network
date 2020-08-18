@@ -577,7 +577,7 @@ display: none;
 position: absolute;
 right: -30px;
 box-shadow: 4px 4px 6px -1px rgba(0, 0, 0, 0.2), -4px 4px 6px -1px rgba(0, 0, 0, 0.2); }
-ul.language li a{
+ul.language li{
 width: 158px;
 padding: 20px 0 20px 18px;
 background: #111111;
