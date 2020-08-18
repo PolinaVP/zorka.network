@@ -104,12 +104,33 @@ i18next.on('languageChanged', () => {
 }
 )
 
+let linkEls = document.querySelectorAll('.language');
+
+function changelng(data) {
+  if (data == null)
+    return;
+
+  i18next.changeLanguage(data);
+}
+
+function clickHandler(event) {
+  var lang = event.target.getAttribute('href').split('/').pop(),
+    data = lang || null; // In reality this could be an AJAX request
+
+  changelng(data);
+  history.pushState(data, event.target.textContent, data);
+
+  return event.preventDefault();
+}
+
+for (var i = 0, l = linkEls.length; i < l; i++) {
+  linkEls[i].addEventListener('click', clickHandler, true);
+}
 window.addEventListener('popstate', function (event) {
-  console.log(event.state);
+  console.log('popstate fired!');
 
-  i18next.changeLanguage(event.state);
+  changelng(event.state);
 });
-
 
 
 

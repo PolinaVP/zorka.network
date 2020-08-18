@@ -1,4 +1,4 @@
-let stateObj = { foo: "lang" };
+
 
 i18next.use(i18nextBrowserLanguageDetector).init({
   fallbackLng: 'ru',
@@ -788,13 +788,13 @@ function updateContent() {
 
 
   if (i18next.language == 'ru') {
-    history.pushState(stateObj, '', 'ru');
+    history.pushState('ru', '', 'ru');
     document.querySelector('.language a:nth-child(1) li').className = "grey";
     document.querySelector('.language a:nth-child(2) li').className = "";
     document.querySelector('.mob_lang a:nth-child(1)').className = "act_lang";
     document.querySelector('.mob_lang a:nth-child(2)').className = "";
   } else {
-    history.pushState(stateObj, '', 'en');
+    history.pushState('en', '', 'en');
     document.querySelector('.language a:nth-child(2) li').className = "grey";
     document.querySelector('.language a:nth-child(1) li').className = "";
     document.querySelector('.mob_lang a:nth-child(2)').className = "act_lang";
@@ -810,7 +810,33 @@ i18next.on('languageChanged', () => {
   updateContent();
 }
 )
+let linkEls = document.querySelectorAll('.language');
 
+function changelng(data) {
+  if (data == null)
+    return;
+
+  i18next.changeLanguage(data);
+}
+
+function clickHandler(event) {
+  var lang = event.target.getAttribute('href').split('/').pop(),
+    data = lang || null; // In reality this could be an AJAX request
+
+  changelng(data);
+  history.pushState(data, event.target.textContent, data);
+
+  return event.preventDefault();
+}
+
+for (var i = 0, l = linkEls.length; i < l; i++) {
+  linkEls[i].addEventListener('click', clickHandler, true);
+}
+window.addEventListener('popstate', function (event) {
+  console.log('popstate fired!');
+
+  changelng(event.state);
+});
 
 
 
