@@ -195,3 +195,4 @@ window.addEventListener('popstate', function (event) {
   changelng(event.state);
 });
 
+history.replaceState(i18next.language, '', i18next.language);
