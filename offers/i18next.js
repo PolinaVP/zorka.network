@@ -126,7 +126,6 @@ for (var i = 0, l = linkEls.length; i < l; i++) {
   linkEls[i].addEventListener('click', clickHandler, true);
 }
 window.addEventListener('popstate', function (event) {
-  console.log('popstate fired!');
 
   changelng(event.state);
 });
