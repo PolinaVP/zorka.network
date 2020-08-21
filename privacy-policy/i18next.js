@@ -824,7 +824,7 @@ function clickHandler(event) {
     data = lang || null;
 
   changelng(data);
-  history.pushState(data, event.target.textContent, `/zorka.network/${data}/privacy-policy`);
+  history.pushState(data, event.target.textContent, `/${data}/privacy-policy`);
 
   return event.preventDefault();
 }
@@ -837,7 +837,7 @@ window.addEventListener('popstate', function (event) {
   changelng(event.state);
 });
 
-history.replaceState(i18next.language, '', `/zorka.network/${i18next.language}/privacy-policy`);
+history.replaceState(i18next.language, '', `/${i18next.language}/privacy-policy`);
 
 
 

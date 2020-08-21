@@ -117,7 +117,7 @@ function clickHandler(event) {
     data = lang || null;
 
   changelng(data);
-  history.pushState(data, event.target.textContent, `/zorka.network/${data}/offers`);
+  history.pushState(data, event.target.textContent, `/${data}/offers`);
 
   return event.preventDefault();
 }
@@ -130,7 +130,7 @@ window.addEventListener('popstate', function (event) {
   changelng(event.state);
 });
 
-history.replaceState(i18next.language, '', `/zorka.network/${i18next.language}/offers`);
+history.replaceState(i18next.language, '', `/${i18next.language}/offers`);
 
 
 
