@@ -117,7 +117,7 @@ function clickHandler(event) {
     data = lang || null;
 
   changelng(data);
-  history.pushState(data, event.target.textContent, data);
+  history.pushState(data, event.target.textContent, `/zorka.network/${data}/offers`);
 
   return event.preventDefault();
 }
