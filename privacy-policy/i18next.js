@@ -791,14 +791,14 @@ function updateContent() {
 
     document.querySelector('.language li:nth-child(1)').className = "grey";
     document.querySelector('.language li:nth-child(2)').className = "";
-    document.querySelector('.mob_lang a:nth-child(1)').className = "act_lang";
-    document.querySelector('.mob_lang a:nth-child(2)').className = "";
+    document.querySelector('.mob_lang a:nth-child(1)').classList.add('act_lang');
+    document.querySelector('.mob_lang a:nth-child(2)').classList.remove('act_lang');
   } else {
 
     document.querySelector('.language li:nth-child(2)').className = "grey";
     document.querySelector('.language li:nth-child(1)').className = "";
-    document.querySelector('.mob_lang a:nth-child(2)').className = "act_lang";
-    document.querySelector('.mob_lang a:nth-child(1)').className = "";
+    document.querySelector('.mob_lang a:nth-child(2)').classList.add('act_lang');
+    document.querySelector('.mob_lang a:nth-child(1)').classList.remove('act_lang');
   };
 }
 

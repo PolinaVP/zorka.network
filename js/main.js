@@ -22,7 +22,7 @@ function openWorld() {
     $('.bl_w_world').css({ 'display': 'block' });
 
   })
-  $('.language a li').click(function () {
+  $('.language li a').click(function () {
     $('.language').css({ 'display': 'none' });
     $('.bl_w_world').css({ 'display': 'none' });
 
