@@ -103,32 +103,32 @@ i18next.on('languageChanged', () => {
 }
 )
 
-let linkEls = document.querySelectorAll('.change_language');
+// let linkEls = document.querySelectorAll('.change_language');
 
-function changelng(data) {
-  if (data == null)
-    return;
+// function changelng(data) {
+//   if (data == null)
+//     return;
 
-  i18next.changeLanguage(data);
-}
+//   i18next.changeLanguage(data);
+// }
 
-function clickHandler(event) {
-  var lang = event.target.getAttribute('href').split('/').pop(),
-    data = lang || null;
+// function clickHandler(event) {
+//   var lang = event.target.getAttribute('href').split('/').pop(),
+//     data = lang || null;
 
-  changelng(data);
-  history.pushState(data, event.target.textContent, `/${data}/offers`);
+//   changelng(data);
+//   history.pushState(data, event.target.textContent, `/${data}/offers`);
 
-  return event.preventDefault();
-}
+//   return event.preventDefault();
+// }
 
-for (var i = 0, l = linkEls.length; i < l; i++) {
-  linkEls[i].addEventListener('click', clickHandler, true);
-}
-window.addEventListener('popstate', function (event) {
+// for (var i = 0, l = linkEls.length; i < l; i++) {
+//   linkEls[i].addEventListener('click', clickHandler, true);
+// }
+// window.addEventListener('popstate', function (event) {
 
-  changelng(event.state);
-});
+//   changelng(event.state);
+// });
 
 // history.replaceState(i18next.language, '', `/${i18next.language}/offers`);
 
